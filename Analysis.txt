@@ -6,3 +6,6 @@ EU /list avg: 461.12494468688965 ms
 
 Part B. Eventual Consistency
 number of times the new username was not found in the list immediately after registration: 0
+
+Analysis
+The latency resutls how a difference in the two regions. Requests to the instance in us-central1 have lower latency compared to requests to europe-west1 which makes sense since the client script was run in the us-central region. Requests to Europe need to travel internationally, causing additional network delay. The consistency experiment showed zero misses, meaning every newly registered user was immediately visible while querying the other region. This suggests that replication between regions occurs very quickly (within milliseconds). Because there is already some delay between the write request and the subsequent read request due to network latency, the data has enough time to propagate before being queried. This shows that the system behaves similarly to a strongly consistent system under low load and typical conditions.
