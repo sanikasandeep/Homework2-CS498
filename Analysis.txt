@@ -1,0 +1,8 @@
+Part A. Latency Measurement
+US /register avg: 85.60853004455566 ms
+EU /register avg: 514.0690326690674 ms
+US /list avg: 103.39701175689697 ms
+EU /list avg: 461.12494468688965 ms
+
+Part B. Eventual Consistency
+number of times the new username was not found in the list immediately after registration: 0
