@@ -1,3 +1,5 @@
+### I wrote a Python client-side script using the requests library to interact with both deployed service instances in the us-central1 and europe-west1 regions. The script sends multiple HTTP requests to the /register and /list endpoints and measures the time taken for each request by recording timestamps immediately before and after the call. These durations are used to compute average latency for each endpoint in each region using helper functions measure_latency and avg. ###
+
 import requests
 import time
 
